@@ -13,9 +13,9 @@ void print_pascal(int size){
 	}
 	else{
 
-		while((odd = malloc(sizeof(int))) == NULL)
+		odd = malloc(sizeof(int))
 			;
-		while((even = malloc(sizeof(int) * 2)) == NULL)
+		even = malloc(sizeof(int) * 2))
 			;
 
 		*odd = 1;
@@ -28,7 +28,7 @@ void print_pascal(int size){
 
 		for(int i = 3; i < size; i++){
 			
-			while((odd = realloc(odd, sizeof(int) * i)) == NULL);
+			odd = realloc(odd, sizeof(int) * i)
 
 			*odd = 1;
 			*(odd + i - 1) = 1;
@@ -44,7 +44,7 @@ void print_pascal(int size){
 
 			i += 1;
 
-			while((even = realloc(even, sizeof(int) * i)) == NULL)
+			even = realloc(even, sizeof(int) * i)
 				;
 			
 			*even = 1;
