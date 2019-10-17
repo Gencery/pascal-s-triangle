@@ -28,7 +28,7 @@ void print_pascal(int size){
 
 		for(int i = 3; i < size; i++){
 			
-			odd = realloc(odd, sizeof(int) * i)
+			odd = realloc(odd, sizeof(int) * i);
 
 			*odd = 1;
 			*(odd + i - 1) = 1;
