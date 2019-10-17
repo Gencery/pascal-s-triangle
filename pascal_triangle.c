@@ -15,7 +15,7 @@ void print_pascal(int size){
 
 		odd = malloc(sizeof(int))
 			;
-		even = malloc(sizeof(int) * 2))
+		even = malloc(sizeof(int) * 2);
 			;
 
 		*odd = 1;
