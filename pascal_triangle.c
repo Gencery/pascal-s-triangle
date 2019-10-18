@@ -2,32 +2,23 @@
 #include <stdlib.h>
 void print_pascal(int size){
 
-	int* odd = NULL;
-	int* even = NULL;
-
 	puts("1");
 	if(size == 1){
-		free(odd);
-		free(even);
 		return;
 	}
 	puts("1\t1");
 	if(size == 2){
-		free(odd);
-		free(even);
 		return;
 	}
 
-	odd = malloc(sizeof(int));
-	even = malloc(sizeof(int) * 2);
+	int* odd = malloc(sizeof(int) * size);
+	int* even = malloc(sizeof(int) * (size));
 
 	even[0] = 1;
 	even[1] = 1;
 
 	for(int i = 3; i < size; i++){
 			
-		odd = realloc(odd, sizeof(int) * i);
-
 		odd[0] = 1;
 		odd[i - 1] = 1;
 			
@@ -42,8 +33,6 @@ void print_pascal(int size){
 
 		i += 1;
 
-		even = realloc(even, sizeof(int) * i);
-			
 		even[0] = 1;
 		even[i - 1] = 1;
 			
